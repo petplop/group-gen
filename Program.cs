@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,26 +31,28 @@ namespace GroupGen
                             //Get the path of specified file
                             selectedFile = openFileDialog.FileName;
                         }
-                    }
-
-                    int yes_or_no = 0;
-                    Console.WriteLine("File not selected, would you like to try again?\n" +
-                        "\nPress 1 for YES" +
-                        "\nPress 2 for EXIT");
-
-                    bool isValid = int.TryParse(Console.ReadLine(), out yes_or_no);
-
-                    if (isValid)
-                    {
-                        if (yes_or_no == 1)
+                        else
                         {
-                            Console.WriteLine("\nTry again\n");
-                        }
-                        if (yes_or_no == 2)
-                        {
-                            Console.WriteLine("\nExiting...");
-                            System.Threading.Thread.Sleep(1000);
-                            System.Environment.Exit(1);
+                            int yes_or_no = 0;
+                            Console.WriteLine("File not selected, would you like to try again?\n" +
+                                "\nPress 1 for YES" +
+                                "\nPress 2 for EXIT");
+
+                            bool isValid = int.TryParse(Console.ReadLine(), out yes_or_no);
+
+                            if (isValid)
+                            {
+                                if (yes_or_no == 1)
+                                {
+                                    Console.WriteLine("\nTry again\n");
+                                }
+                                if (yes_or_no == 2)
+                                {
+                                    Console.WriteLine("\nExiting...");
+                                    System.Threading.Thread.Sleep(1000);
+                                    System.Environment.Exit(1);
+                                }
+                            }
                         }
                     }
                 }
