@@ -16,9 +16,6 @@ namespace GroupGen
             {
                 while (selectedFile == null)
                 {
-                    var fileContent = string.Empty;
-                    var filePath = string.Empty;
-
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
