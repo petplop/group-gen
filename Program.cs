@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace CSharpBasics
+namespace GroupGen
 {
     internal class Program
     {
